@@ -12,3 +12,7 @@ gen
 activitylifezcycletest/libs/
 activitylifezcycletest/src/main/res/drawable/
 settings.gradle
+activitylifezcycletest/gradle.properties
+activitylifezcycletest/gradlew
+activitylifezcycletest/gradlew.bat
+activitylifezcycletest/local.properties
