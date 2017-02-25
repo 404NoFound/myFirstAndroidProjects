@@ -9,7 +9,21 @@ import com.example.myapplication.BaseActivity
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_first.*
 
-class FirstActivity : BaseActivity() {
+class FirstActivity : BaseActivity() ,View.OnClickListener {
+    /**
+     * Called when a view has been clicked.
+
+     * @param v The view that was clicked.
+     */
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.button -> {
+                val intent = Intent(this, SecondActivity::class.java)
+                startActivity(intent)
+            }
+
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,5 +40,13 @@ class FirstActivity : BaseActivity() {
     override fun onRestart() {
         super.onRestart()
         Log.d(this.localClassName, "OnRestart");
+    }
+
+
+
+
+
+    override fun onContentChanged() {
+        super.onContentChanged()
     }
 }
