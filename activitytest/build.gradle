@@ -6,7 +6,7 @@ android {
     buildToolsVersion "25.0.0"
 
     defaultConfig {
-        applicationId "com.example.activitylifezcycletest"
+        applicationId "com.example.AcitivtyTest"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1

@@ -1,12 +1,12 @@
-package com.example.activitylifezcycletest
+package com.example.activityLifeCycleTest
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class normalActivity : AppCompatActivity() {
+class DialogActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_normal)
+        setContentView(R.layout.activity_dialog)
     }
 }
