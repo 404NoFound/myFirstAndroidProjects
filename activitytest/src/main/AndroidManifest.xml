@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.FirstActivity"
+            android:name="com.example.myapplication.activities.FirstActivity"
             android:label="This is FirstActivity"
             android:launchMode="singleTop">
             <intent-filter>
