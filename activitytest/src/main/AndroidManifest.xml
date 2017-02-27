@@ -9,19 +9,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.myapplication.activities.FirstActivity"
+            android:name=".activities.FirstActivity"
             android:label="This is FirstActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"></activity>
+        <activity
+            android:name=".activities.SecondActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".activities.ThirdActivity" />
+        <activity android:name=".activities.MainActivity">
+        </activity>
+        <activity android:name=".activities.PercentFrameLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.SecondActivity"
-            android:launchMode="singleInstance" />
-        <activity android:name=".activities.ThirdActivity" />
     </application>
 
 </manifest>
