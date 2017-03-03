@@ -11,7 +11,13 @@
         <activity
             android:name=".activities.FirstActivity"
             android:label="This is FirstActivity"
-            android:launchMode="singleTop"></activity>
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.SecondActivity"
             android:launchMode="singleInstance" />
@@ -19,11 +25,7 @@
         <activity android:name=".activities.MainActivity">
         </activity>
         <activity android:name=".activities.PercentFrameLayoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

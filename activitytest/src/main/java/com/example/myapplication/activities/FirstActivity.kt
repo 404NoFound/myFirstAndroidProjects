@@ -1,5 +1,6 @@
 package com.example.myapplication.activities
 
+import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.os.Bundle
 import android.text.Editable
@@ -23,20 +24,31 @@ class FirstActivity : BaseActivity(), View.OnClickListener {
             R.id.button -> {
 //                val intent = Intent(this, SecondActivity::class.java)
 //                startActivity(intent)
-                var progress = progressBar2.progress;
-                progress += 10;
-                progressBar2.progress = progress
+//                var progress = progressBar2.progress;
+//                progress += 10;
+//                progressBar2.progress = progress
+//
+//                val dialog = ProgressDialog(this);
+//                dialog.setTitle("This is a dialog");
+//
+//                dialog.setMessage("Something important")
+//                dialog.setCancelable(true)
+//                //dialog.button("OK", { dialogInterface, d -> toast(d.toString()) })
+//                //dialog.setNegativeButton("cancel", { dialogInterface, i -> toast(dialogInterface.toString()) })
+//                dialog.show()
 
-                val dialog = ProgressDialog(this);
-                dialog.setTitle("This is a dialog");
-
-                dialog.setMessage("Something important")
-                dialog.setCancelable(true)
-                //dialog.button("OK", { dialogInterface, d -> toast(d.toString()) })
-                //dialog.setNegativeButton("cancel", { dialogInterface, i -> toast(dialogInterface.toString()) })
-                dialog.show()
+                //alterDialog
 
 
+            }
+            R.id.btn_AlertDialog -> {
+                AlertDialog.Builder(this).setMessage("something import").setTitle("this is a Alert dialog").show()
+            }
+            R.id.btn_ProgressDialog -> {
+                val progressDialog = ProgressDialog(this)
+                progressDialog.setMessage("this is progress dialog")
+                progressDialog.setTitle("progress dialog")
+                progressDialog.show()
             }
 
         }
@@ -49,6 +61,8 @@ class FirstActivity : BaseActivity(), View.OnClickListener {
         setContentView(R.layout.activity_first)
         Log.d(this.localClassName, "Task ID is $taskId")
         button.setOnClickListener(this)
+        btn_AlertDialog.setOnClickListener(this)
+        btn_ProgressDialog.setOnClickListener(this)
         textView_ActivityProcess.text = this.toString()
         editText_FontSizeOnChange()
 
