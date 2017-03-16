@@ -14,45 +14,6 @@ import kotlinx.android.synthetic.main.activity_first.*
 class FirstActivity : BaseActivity(), View.OnClickListener {
     var TAG: String = ""
 
-    /**
-     * Called when a view has been clicked.
-
-     * @param v The view that was clicked.
-     */
-    override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.button -> {
-//                val intent = Intent(this, SecondActivity::class.java)
-//                startActivity(intent)
-//                var progress = progressBar2.progress;
-//                progress += 10;
-//                progressBar2.progress = progress
-//
-//                val dialog = ProgressDialog(this);
-//                dialog.setTitle("This is a dialog");
-//
-//                dialog.setMessage("Something important")
-//                dialog.setCancelable(true)
-//                //dialog.button("OK", { dialogInterface, d -> toast(d.toString()) })
-//                //dialog.setNegativeButton("cancel", { dialogInterface, i -> toast(dialogInterface.toString()) })
-//                dialog.show()
-
-                //alterDialog
-
-
-            }
-            R.id.btn_AlertDialog -> {
-                AlertDialog.Builder(this).setMessage("something import").setTitle("this is a Alert dialog").show()
-            }
-            R.id.btn_ProgressDialog -> {
-                val progressDialog = ProgressDialog(this)
-                progressDialog.setMessage("this is progress dialog")
-                progressDialog.setTitle("progress dialog")
-                progressDialog.show()
-            }
-
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,9 +26,36 @@ class FirstActivity : BaseActivity(), View.OnClickListener {
         btn_ProgressDialog.setOnClickListener(this)
         textView_ActivityProcess.text = this.toString()
         editText_FontSizeOnChange()
+        if (supportActionBar != null) {
+            supportActionBar!!.hide();
+        }
 
 
     }
+
+    /**
+     * Called when a view has been clicked.
+
+     * @param v The view that was clicked.
+     */
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.button -> {
+            }
+            R.id.btn_AlertDialog -> {
+                AlertDialog.Builder(this).setMessage("something import").setTitle("this is a Alert dialog").show()
+            }
+            R.id.btn_ProgressDialog -> {
+                val progressDialog = ProgressDialog(this)
+                progressDialog.setMessage("this is progress dialog")
+                progressDialog.setTitle("progress dialog")
+                progressDialog.show()
+            }
+
+
+        }
+    }
+
 
     private fun editText_FontSizeOnChange() {
         editText_FontSize.addTextChangedListener(object : TextWatcher {

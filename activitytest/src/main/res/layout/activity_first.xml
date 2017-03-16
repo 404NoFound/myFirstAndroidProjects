@@ -1,82 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_first"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
 
-    tools:context="com.example.myapplication.activities.FirstActivity">
+    tools:context="com.example.myapplication.activities.FirstActivity"
+    android:orientation="horizontal">
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView_HelloWorld" />
+    <!--<include layout="@layout/title" />-->
+<com.example.myapplication.activities.TitleLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></com.example.myapplication.activities.TitleLayout>
+    <TextView
+        android:id="@+id/textView_HelloWorld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
 
     <ImageView
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/qq_capture"
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:contentDescription="1"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        app:srcCompat="@mipmap/qq_capture" />
 
     <EditText
+        android:id="@+id/editText_FontSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:ems="10"
         android:layout_marginStart="14dp"
-        android:id="@+id/editText_FontSize"
+        android:ems="10"
         android:hint="Font Size"
-        android:layout_below="@+id/textView_ActivityProcess"
-        android:layout_alignParentStart="true" />
+        android:inputType="numberSigned" />
 
     <TextView
-        android:text="TextView"
+        android:id="@+id/textView_ActivityProcess"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView_ActivityProcess"
-        android:layout_below="@+id/button"
-        android:layout_alignParentStart="true" />
+        android:text="TextView" />
 
     <Button
-        android:text="Button"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_below="@+id/textView_HelloWorld"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="7dp" />
+        android:layout_marginTop="7dp"
+        android:text="Button" />
 
     <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_FontSize"
-        android:layout_alignStart="@+id/editText_FontSize"
         android:id="@+id/progressBar2"
-        android:layout_alignParentEnd="true" />
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btn_AlertDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AlertDialog"
-        android:layout_alignBaseline="@+id/button"
-        android:layout_alignBottom="@+id/button"
-        android:layout_toEndOf="@+id/button" />
+
+        android:text="AlertDialog" />
 
     <Button
         android:id="@+id/btn_ProgressDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_alignBaseline="@+id/btn_AlertDialog"
-        android:layout_alignBottom="@+id/btn_AlertDialog"
-        android:layout_toEndOf="@+id/btn_AlertDialog" />
+
+        android:text="Button" />
 
 
-</RelativeLayout>
+</LinearLayout>

@@ -22,11 +22,8 @@
             android:name=".activities.SecondActivity"
             android:launchMode="singleInstance" />
         <activity android:name=".activities.ThirdActivity" />
-        <activity android:name=".activities.MainActivity">
-        </activity>
-        <activity android:name=".activities.PercentFrameLayoutActivity">
-
-        </activity>
+        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.PercentFrameLayoutActivity"></activity>
     </application>
 
 </manifest>

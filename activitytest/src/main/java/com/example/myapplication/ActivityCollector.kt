@@ -1,8 +1,7 @@
 package com.example.myapplication
 
 import android.app.Activity
-
-import java.util.ArrayList
+import java.util.*
 
 object ActivityCollector {
     private val activities = ArrayList<Activity>()
@@ -14,7 +13,6 @@ object ActivityCollector {
     fun RemoveActivity(activity: Activity) {
         activities.remove(activity)
     }
-
     fun finishAll() {
         activities.filter { !it.isFinishing }.forEach { it.finish() }
 
